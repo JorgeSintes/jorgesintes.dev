@@ -1,6 +1,6 @@
 +++
 title = "Building a PureGym MCP server"
-date = 2026-03-23T17:35:00+01:00
+date = 2026-03-30T20:35:00+01:00
 draft = false
 +++
 
