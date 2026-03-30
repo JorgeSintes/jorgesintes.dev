@@ -23,14 +23,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
-    var clipboard = new ClipboardJS('.copy-button')
+    var clipboard = new ClipboardJS('.copy-button', {
+        text: function (trigger) {
+            var directText = trigger.getAttribute('data-copy-text');
+            if (directText) {
+                return directText;
+            }
+
+            var target = trigger.getAttribute('data-clipboard-target');
+            if (!target) {
+                return '';
+            }
+
+            var targetElement = document.querySelector(target);
+            return targetElement ? targetElement.textContent : '';
+        }
+    })
     clipboard.on('success', function (e) {
         var btn = e.trigger; // the button that was clicked
         var originalHTML = btn.innerHTML;
-        btn.innerHTML = 'Yanked!'; // Change button text to 'Yanked!'
+        if (btn.classList.contains('copy-url-pill')) {
+            btn.setAttribute('data-copied', 'true');
+        } else {
+            btn.innerHTML = 'Yanked!';
+        }
 
         setTimeout(function () {
-            btn.innerHTML = originalHTML; // Revert text back after 2s
+            if (btn.classList.contains('copy-url-pill')) {
+                btn.setAttribute('data-copied', 'false');
+            } else {
+                btn.innerHTML = originalHTML; // Revert text back after 2s
+            }
         }, 2000);
 
         e.clearSelection(); // Optionally clear the selection

@@ -1,0 +1,10 @@
+{{- $src := .Get "src" -}}
+{{- $ratio := .Get "ratio" | default "16 / 9" -}}
+
+<video
+  controls
+  playsinline
+  preload="metadata"
+  style="width: 100%; height: auto; aspect-ratio: {{ $ratio }}"
+  src="{{ $src }}"
+></video>

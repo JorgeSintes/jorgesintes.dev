@@ -342,6 +342,53 @@ nav a {
     width: .9rem;
 }
 
+.copy-url-pill.copy-button {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    max-width: 100%;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--pico-muted-border-color);
+    border-radius: calc(var(--pico-border-radius) * 0.8);
+    background: var(--pico-card-background-color);
+    color: var(--pico-primary);
+    font-family: var(--pico-font-family-monospace);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.copy-url-pill.copy-button:hover,
+.copy-url-pill.copy-button:focus-visible {
+    border-color: var(--pico-primary);
+    color: var(--pico-primary);
+}
+
+.copy-url-pill-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-url-pill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.copy-url-pill-icon svg {
+    width: 0.85rem;
+    height: 0.85rem;
+    fill: currentColor;
+}
+
+.copy-url-pill[data-copied="true"] .copy-url-pill-icon {
+    color: var(--pico-primary-hover);
+}
+
 .multi-column-list ul {
     column-count: 2;
     column-width: 200px;
