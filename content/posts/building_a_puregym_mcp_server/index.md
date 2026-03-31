@@ -4,7 +4,7 @@ date = 2026-03-30T20:00:00+02:00
 draft = false
 +++
 
-I have spent the last few a
+I have spent the last few weeks building a
 [Model Context Protocol server](https://modelcontextprotocol.io/docs/getting-started/intro) exposing PureGym's
 functionality.
 
