@@ -13,6 +13,8 @@ to search classes, list centers, inspect bookings, check live center status and 
 credentials are configured, book or cancel classes. It even has a
 [landing page](https://puregym-mcp.jorgesintes.dev)!
 
+<!--more-->
+
 Before getting into the story, here is the current package in action, using Mistral's
 [Le Chat](https://chat.mistral.ai/chat):
 
