@@ -1,22 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ .Site.Language }}" data-theme="dark">
   <head>
     <meta chasrset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/site_logo/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/site_logo/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/site_logo/favicon-16x16.png" />
-    <link rel="manifest" href="/site_logo/site.webmanifest" />
-    <title>{{ if not .IsHome}}{{ .Title | title }} | {{ end }}{{ .Site.Title}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.lime.css" />
-    <link rel="stylesheet" href="/css/catppuccin-latte.css" id="chromaLight" disabled />
-    <link rel="stylesheet" href="/css/catppuccin-macchiato.css" id="chromaDark" disabled />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>
+      {{ if not .IsHome}}{{ .Title | title }} | {{ end }}{{ .Site.Title}}
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.lime.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/css/catppuccin-latte.css"
+      id="chromaLight"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="/css/catppuccin-macchiato.css"
+      id="chromaDark"
+      disabled
+    />
     <link rel="stylesheet" href="/css/extra.css" />
     <link rel="stylesheet" href="/css/company_title.css" />
     <link rel="stylesheet" href="/css/position.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -26,7 +44,9 @@
       {{ if not .IsHome }}
       <header class="page-header">
         <div class="page-header-main">
-          <h1 id="tag_{{ .Title }}">{{ block "title" . }} {{ .Title }}{{ end }}</h1>
+          <h1 id="tag_{{ .Title }}">
+            {{ block "title" . }} {{ .Title }}{{ end }}
+          </h1>
         </div>
         {{ with .Params.runtimeDownloads }}
         <div class="page-header-actions">
@@ -37,8 +57,9 @@
       </header>
       {{ end }}
       <section class="content-wrap">
-        {{ block "main" . }} {{ .Content }} {{ end }} {{ if .Param "nextprev" }}{{ partial "nextprev.html" .
-        }} {{ end }} {{ if .Param "taglist" }}{{ partial "taglist.html" . }} {{ end }}
+        {{ block "main" . }} {{ .Content }} {{ end }} {{ if .Param "nextprev"
+        }}{{ partial "nextprev.html" . }} {{ end }} {{ if .Param "taglist" }}{{
+        partial "taglist.html" . }} {{ end }}
       </section>
       {{ partial "footer.html" . }}
     </main>
