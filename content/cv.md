@@ -48,6 +48,9 @@ runtimeDownloads:
 - Designed a supervised model predicting pressure signals to **attempt monocular 3D pose estimation without
   physical sensors**.
 
+- Master's thesis:
+  [Guiding 3D Human Pose Estimation using Feet Pressure Sensors](https://jorgesintes.dev/files/jorge-sintes-master-thesis.pdf).
+
 {{< company_title companyName="Novo Nordisk" url="https://www.novonordisk.com" logoLight="/company_logos/novo_nordisk_logo.svg" logoDark="/company_logos/novo_nordisk_logo.svg" >}}
 
 {{< position title="Data Science Student" duration="06/2021 - 07/2022" >}}
